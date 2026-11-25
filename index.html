@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>【漢樂府】陌上桑｜技術型高中公開觀課互動影音教室</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&family=Noto+Serif+TC:wght@600;700;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <!-- ==================== 頂部導覽與公開觀課教師工具列 ==================== -->
+  <header class="site-header" id="siteHeader">
+    <div class="container header-inner">
+      <a href="#top" class="brand">
+        <div class="seal-stamp">樂府</div>
+        <div class="brand-text">
+          <strong>陌上桑・互動觀課教室</strong>
+          <span>技術型高中國文｜古詩選讀公開觀課</span>
+        </div>
+      </a>
+
+      <nav class="nav-links" aria-label="主要導覽">
+        <a href="#theater">🎬 影音劇場</a>
+        <a href="#decoder">📖 三解精解</a>
+        <a href="#vocational">🛠️ 技高跨域</a>
+        <a href="#games">🎮 課堂闖關</a>
+        <a href="#observation">📋 觀課教案</a>
+      </nav>
+
+      <div class="toolbar-actions">
+        <button class="tool-btn" id="btnBgmGlobal" title="開啟/關閉漢風古箏背景配樂">🎵 古箏配樂</button>
+        <button class="tool-btn" id="btnProjector" title="放大字體適合教室投影">📽️ 投影大字</button>
+        <button class="tool-btn" id="btnOpenTimer" title="課堂討論倒數計時器">⏱️ 計時器</button>
+        <button class="tool-btn accent" id="btnOpenPicker" title="隨機抽座號回答問題">🎲 抽座號</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==================== HERO 視覺主舞台 ==================== -->
+  <main id="top">
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <div class="hero-badges">
+            <span class="pill pill-red">🔥 技術型高中公開觀課專用</span>
+            <span class="pill pill-jade">📜 漢樂府・相和歌辭</span>
+            <span class="pill pill-gold">🎙️ 內建配樂＋語音劇場</span>
+          </div>
+
+          <h1 class="hero-title">
+            【樂府】<span class="highlight">陌上桑</span>
+          </h1>
+          <p class="hero-subtitle">
+            一場五馬高官的當街翻車實錄 × 漢代最強嘴砲防身術！
+          </p>
+          <p class="hero-desc">
+            誰說古詩一定催眠？這首兩千年前的漢代民歌，集結了<strong>「高級穿搭 OOTD」</strong>、<strong>「全村路人集體降智」</strong>、<strong>「硬剛權貴反性騷擾」</strong>與<strong>「凡爾賽誇夫天花板」</strong>！支援動態有聲繪本、古箏合成配樂、段考陷阱字點擊即看，讓觀課教室笑聲不斷、素養滿分。
+          </p>
+
+          <div class="hero-cta">
+            <a href="#theater" class="btn btn-primary" id="heroStartTheater">🎬 立即啟動有聲劇場</a>
+            <a href="#decoder" class="btn btn-secondary">📖 進入三解幽默精解</a>
+            <a href="#observation" class="btn btn-outline">📋 觀課教案與學習單</a>
+          </div>
+
+          <div class="hero-stats">
+            <div class="stat-card">
+              <strong>三解結構</strong>
+              <span>美貌側寫 → 拒守 → 誇夫</span>
+            </div>
+            <div class="stat-card">
+              <strong>0 個「美」字</strong>
+              <span>卻寫出千古第一女神</span>
+            </div>
+            <div class="stat-card">
+              <strong>5 馬 vs 千騎</strong>
+              <span>不流血的語言降維打擊</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <div class="hero-frame">
+            <img src="assets/images/hero-mulberry.jpg" alt="漢樂府陌上桑秦羅敷城南採桑國潮工筆插畫" />
+            <div class="hero-caption-float">
+              <div>
+                <p>「日出東南隅，照我秦氏樓。秦氏有好女，自名為羅敷。」</p>
+                <small>點擊右側按鈕，立刻開啟漢風古箏配樂＋說書人動態劇場！</small>
+              </div>
+              <button class="quick-play-circle" id="heroQuickPlay" aria-label="立即播放互動有聲劇場" title="播放互動有聲劇場">▶</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== SECTION 1: 互動影音劇場 & 影音資源庫 ==================== -->
+    <section class="section section-alt" id="theater">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-kicker">AUDIO-VISUAL STORYBOARD THEATER</div>
+          <h2>🎬 陌上桑・互動動態有聲劇場（支援離線教室播放）</h2>
+          <p>結合原創國潮繪本、Ken Burns 電影運鏡、Web Audio 漢風五聲古箏配樂、雙聲道語音朗讀與幽默課堂彈幕！</p>
+        </div>
+
+        <div class="theater-shell">
+          <div class="theater-topbar">
+            <div class="theater-title-group">
+              <span class="live-dot"></span>
+              <strong id="theaterHeaderTitle">序幕｜黃金蘋果光：秦羅敷登場</strong>
+            </div>
+
+            <div class="theater-mode-switches">
+              <button class="dark-chip active" id="modeHumor" data-voice-mode="humor">🤣 幽默說書人聲道</button>
+              <button class="dark-chip" id="modeClassic" data-voice-mode="classic">📜 古風原文朗誦聲道</button>
+              <button class="dark-chip active" id="btnToggleDanmaku">💬 課堂彈幕：開</button>
+              <button class="dark-chip" id="btnTheaterBgm">🎵 古箏BGM：關</button>
+            </div>
+          </div>
+
+          <div class="theater-stage" id="theaterStage">
+            <img id="theaterImg" class="theater-bg-img" src="assets/images/hero-mulberry.jpg" alt="陌上桑劇場畫面" />
+            <div class="theater-vignette"></div>
+            <div class="danmaku-layer" id="danmakuLayer"></div>
+
+            <div class="theater-act-badge" id="theaterActBadge">序幕｜晨光登場</div>
+
+            <div class="theater-visualizer" aria-hidden="true">
+              <span class="viz-bar"></span>
+              <span class="viz-bar"></span>
+              <span class="viz-bar"></span>
+              <span class="viz-bar"></span>
+              <span class="viz-bar"></span>
+            </div>
+
+            <div class="theater-subtitles">
+              <p class="sub-original" id="theaterSubOrig">日出東南隅，照我秦氏樓。秦氏有好女，自名為羅敷。</p>
+              <div class="sub-funny" id="theaterSubFunny">🌅 太陽公公親自打光！秦家超人氣正妹「羅敷」準時上工啦～</div>
+            </div>
+          </div>
+
+          <div class="theater-controls">
+            <div class="theater-bar-row">
+              <div class="play-cluster">
+                <button class="btn-play-main" id="btnTheaterPlay">▶ 播放全劇（8幕連播）</button>
+                <button class="dark-chip" id="btnPrevScene">⏮ 上一幕</button>
+                <button class="dark-chip" id="btnNextScene">⏭ 下一幕</button>
+                <button class="dark-chip" id="btnSpeedCycle">⚡ 語速：1.0x</button>
+                <button class="dark-chip" id="btnFireDanmaku">🚀 發射彈幕</button>
+              </div>
+
+              <div class="sfx-pad" aria-label="課堂即時音效盤">
+                <span style="font-size:0.78rem; color:#B9AF9F; font-weight:700;">課堂即時音效盤：</span>
+                <button class="sfx-btn" data-sfx="gong">💥 驚堂木</button>
+                <button class="sfx-btn" data-sfx="hooves">🐎 五馬奔騰</button>
+                <button class="sfx-btn" data-sfx="glissando">🎼 古箏刮奏</button>
+                <button class="sfx-btn" data-sfx="boing">🤪 爆笑翻車</button>
+              </div>
+            </div>
+
+            <!-- 8 幕分鏡時間軸 -->
+            <div class="theater-timeline" id="theaterTimeline"></div>
+          </div>
+        </div>
+
+        <!-- 延伸影音教學資源（YouTube 精選入口） -->
+        <div class="media-strip" id="externalMediaGrid"></div>
+      </div>
+    </section>
+
+    <!-- ==================== SECTION 2: 全文三解幽默精解 & 互動圖文模組 ==================== -->
+    <section class="section" id="decoder">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-kicker">INTERACTIVE THREE-ACT DECODER</div>
+          <h2>📖 全文「三解」幽默精解 × 必考陷阱字互動圖鑑</h2>
+          <p>點擊詩中<span style="color:var(--vermilion); font-weight:800; border-bottom:2px dashed var(--vermilion);">虛線／金底標示字詞</span>即可秒看教育部標準注音與段考陷阱；每句皆支援一鍵朗讀！</p>
+        </div>
+
+        <div class="tabs-bar" id="actTabs">
+          <button class="tab-btn active" data-act="act1">第一解：美貌與路人降智</button>
+          <button class="tab-btn" data-act="act2">第二解：五馬搭訕翻車</button>
+          <button class="tab-btn" data-act="act3">第三解：凡爾賽誇夫天花板</button>
+          <button class="tab-btn" data-act="all">📜 全詩總覽（朗誦卡拉OK）</button>
+        </div>
+
+        <div class="decoder-controls">
+          <div class="toggle-group">
+            <button class="toggle-pill active" id="toggleZhuyin">🔤 難字注音</button>
+            <button class="toggle-pill active" id="toggleTrans">💬 精準語譯</button>
+            <button class="toggle-pill active" id="toggleHumor">🤣 幽默梗翻譯</button>
+            <button class="toggle-pill active" id="toggleTech">🎯 寫作技法</button>
+          </div>
+          <div style="display:flex; gap:0.5rem; align-items:center;">
+            <button class="tool-btn" id="btnReadCurrentAct">🔊 連讀本段原文</button>
+            <button class="tool-btn" id="btnStopRead">⏹ 停止朗讀</button>
+          </div>
+        </div>
+
+        <!-- 動態渲染區：幕次插畫Banner + 逐句精解卡 + 各解專屬趣味互動模組 -->
+        <div id="decoderContent"></div>
+      </div>
+    </section>
+
+    <!-- ==================== SECTION 3: 技高群科跨域視角 ==================== -->
+    <section class="section section-alt" id="vocational">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-kicker">TECHNICAL HIGH SCHOOL CROSS-DISCIPLINARY</div>
+          <h2>🛠️ 技高同學這樣讀古詩！四大專業群科跨域視角</h2>
+          <p>國文課不是背完就忘——看看服裝設計、商管行銷、資電機械、餐旅觀光如何用專業眼光拆解《陌上桑》！</p>
+        </div>
+
+        <div class="track-grid">
+          <div class="track-menu" id="trackMenu"></div>
+          <div class="track-panel" id="trackPanel"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== SECTION 4: 公開觀課互動高潮（情境冒險 + 搶答擂台） ==================== -->
+    <section class="section" id="games">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-kicker">CLASSROOM INTERACTIVE ARENA</div>
+          <h2>🎮 課堂即時闖關：危機模擬器 × 樂府段考大挑戰</h2>
+          <p>公開觀課最吸睛的師生互動環節！可搭配頂部「🎲 抽座號」與「⏱️ 計時器」，讓全班一起投票通關！</p>
+        </div>
+
+        <div class="games-grid">
+          <!-- Game A: 如果我是羅敷 -->
+          <div class="game-box">
+            <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:0.5rem;">
+              <span class="game-badge pill-purple">🎭 情境角色扮演</span>
+              <span id="endingCounter" style="font-size:0.82rem; font-weight:700; color:var(--jade-deep);">已收集結局：0 / 5</span>
+            </div>
+            <h3>如果我是秦羅敷：五馬危機模擬器</h3>
+            <p style="font-size:0.88rem; color:var(--ink-muted); margin-bottom:0.5rem;">
+              面對五馬太守當街搭訕，全班討論要選哪一招？共有 5 種爆笑／神級結局等你解鎖！
+            </p>
+            <div id="storyContainer"></div>
+          </div>
+
+          <!-- Game B: 樂府段考＆素養搶答 -->
+          <div class="game-box">
+            <div class="quiz-header">
+              <span class="game-badge pill-red" style="margin:0;">⚡ 10題素養搶答</span>
+              <span id="quizScoreBadge">得分：0｜連勝：0 🔥</span>
+            </div>
+            <h3>樂府段考陷阱＆素養快問快答</h3>
+            <div id="quizContainer"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== SECTION 5: 公開觀課教案與 108 課綱素養專區 ==================== -->
+    <section class="section section-alt" id="observation">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-kicker">PUBLIC LESSON OBSERVATION HUB</div>
+          <h2>📋 技術型高中教師公開觀課教案 & 一鍵學習單</h2>
+          <p>專為觀課教師、教學研究會與素養導向評量設計，完整呈現 45 分鐘教學節奏與 108 課綱對照。</p>
+        </div>
+
+        <div class="obs-grid">
+          <div class="lesson-card">
+            <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:0.75rem; margin-bottom:1rem;">
+              <h3 style="margin:0;">⏱️ 45 分鐘公開觀課教學流程配速表</h3>
+              <button class="btn btn-secondary" id="btnPrintWorksheet" style="padding:0.5rem 1rem; font-size:0.86rem;">🖨️ 列印精緻課堂學習單</button>
+            </div>
+            <table class="timeline-table">
+              <thead>
+                <tr>
+                  <th style="width:92px;">時間</th>
+                  <th style="width:115px;">教學階段</th>
+                  <th>師生互動與網站模組運用</th>
+                  <th style="width:110px;">教學策略</th>
+                </tr>
+              </thead>
+              <tbody id="lessonTimelineBody"></tbody>
+            </table>
+          </div>
+
+          <div class="lesson-card">
+            <h3>🎯 108 課綱技高國文核心素養與評量</h3>
+            <div class="rubric-list">
+              <div class="rubric-item">
+                <strong>A2 系統思考與解決問題</strong>
+                <span>剖析羅敷面對權貴騷擾時的危機拆解邏輯（前致辭 → 道德定錨 → 誇夫退敵），遷移至現代職場高 EQ 溝通。</span>
+              </div>
+              <div class="rubric-item">
+                <strong>B1 符號運用與溝通表達</strong>
+                <span>理解漢樂府「三解」結構、側面烘托與層遞誇飾之美，辨識「但坐、謝、共載不、千餘騎、朝大夫」等核心詞音。</span>
+              </div>
+              <div class="rubric-item">
+                <strong>C2 人際關係與團隊合作</strong>
+                <span>透過「羅敷結婚了沒？」即時投票、情境危機抉擇與技高群科跨域討論，培養傾聽、思辨與尊重身體界線之態度。</span>
+              </div>
+              <div class="rubric-item" style="border-left-color:var(--vermilion); background:var(--vermilion-soft);">
+                <strong>💡 給觀課老師的亮點檢核（觀課焦點）</strong>
+                <span>① 多媒體視聽鷹架是否有效降低技高生閱讀古文的畏懼？<br>② 學生於「群科跨域」與「互動遊戲」中的參與度與口語發表品質。</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p style="margin:0 0 0.4rem;">
+        <strong>【漢樂府】陌上桑・技術型高中教師公開觀課互動影音網站</strong>
+      </p>
+      <p style="margin:0; opacity:0.82;">
+        原創國潮繪本插畫 × Web Audio 五聲古箏配樂引擎 × Web Speech 雙聲道朗讀 × 108 課綱技高素養跨域設計
+      </p>
+    </div>
+  </footer>
+
+  <!-- ==================== 懸浮字詞考點彈窗 (Vocab Toast) ==================== -->
+  <div class="vocab-toast" id="vocabToast" role="status" aria-live="polite">
+    <div style="display:flex; justify-content:space-between; align-items:center;">
+      <h4 id="vtWord">但坐（ㄉㄢˋ ㄗㄨㄛˋ）</h4>
+      <button id="vtClose" style="background:none; border:none; color:#E8BE67; font-size:1.1rem; font-weight:900;">✕</button>
+    </div>
+    <p id="vtMeaning"></p>
+    <p id="vtTip" style="color:#E8BE67; font-weight:700; margin-top:0.45rem;"></p>
+  </div>
+
+  <!-- ==================== Modal 1: 課堂倒數計時器 ==================== -->
+  <div class="modal-backdrop" id="timerModal">
+    <div class="modal-card">
+      <button class="modal-close" data-close-modal="timerModal">✕</button>
+      <h3>⏱️ 公開觀課・小組討論倒數計時器</h3>
+      <p style="font-size:0.88rem; color:var(--ink-muted); margin-bottom:0.2rem;">時間到會自動響起清脆古風鈴聲提醒各組收尾！</p>
+      <div class="big-display" id="timerDisplay">03:00</div>
+      <div class="modal-btn-row">
+        <button class="tool-btn" data-timer-preset="60">1 分鐘</button>
+        <button class="tool-btn" data-timer-preset="180">3 分鐘</button>
+        <button class="tool-btn" data-timer-preset="300">5 分鐘</button>
+        <button class="tool-btn" data-timer-preset="10">10 秒測試</button>
+      </div>
+      <div class="modal-btn-row">
+        <button class="btn btn-primary" id="btnTimerToggle">▶ 開始計時</button>
+        <button class="btn btn-outline" id="btnTimerReset">↺ 重設</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== Modal 2: 隨機抽座號器 ==================== -->
+  <div class="modal-backdrop" id="pickerModal">
+    <div class="modal-card">
+      <button class="modal-close" data-close-modal="pickerModal">✕</button>
+      <h3>🎲 課堂天選之人・隨機抽座號器</h3>
+      <div style="display:flex; align-items:center; gap:0.6rem; font-size:0.9rem; margin-top:0.6rem;">
+        <label for="classSizeInput"><strong>班級人數：</strong></label>
+        <input type="number" id="classSizeInput" value="36" min="5" max="60" style="width:72px; padding:0.35rem 0.5rem; border-radius:8px; border:1.5px solid var(--border-strong); font-weight:700;" />
+        <span style="color:var(--ink-muted); font-size:0.82rem;">（不重複抽取，直到重設）</span>
+      </div>
+      <div class="big-display" id="pickerDisplay">? 號</div>
+      <p id="pickerRemark" style="text-align:center; font-weight:700; color:var(--jade-deep); min-height:1.6em;"></p>
+      <div class="modal-btn-row">
+        <button class="btn btn-primary" id="btnPickStudent">🎯 立即開抽！</button>
+        <button class="btn btn-outline" id="btnResetPicker">↺ 清空已抽名單</button>
+      </div>
+      <p id="pickedHistory" style="font-size:0.8rem; color:var(--ink-muted); text-align:center; margin-top:0.8rem;">已抽過座號：無</p>
+    </div>
+  </div>
+
+  <script src="js/data.js"></script>
+  <script src="js/audio.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
